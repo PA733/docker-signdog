@@ -7,6 +7,6 @@ RUN apt update && apt upgrade -y && \
 RUN curl -sL https://deb.nodesource.com/setup_12.x | bash - && \
     apt install -y nodejs
 # 开始下载signdog
-RUN wget -q --no-cookie --no-check-certificate https://www.houzi-blog.top/tool/signdog -O /opt/autocheckin/signdog && \
+RUN wget -q --no-cookie --no-check-certificate https://github.com/houzi-/autocheckin/raw/master/autocheckin/autocheckin/signdog -O /opt/autocheckin/signdog && \
     chmod +x /opt/autocheckin/signdog
 CMD ["/opt/autocheckin/signdog"]
